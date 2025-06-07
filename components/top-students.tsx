@@ -7,6 +7,7 @@ import type { TopStudent } from "@/types/student"
 import { Loader2 } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ApiStatus } from "@/components/api-status"
+import { API_BASE_URL } from "@/lib/config"
 
 export const TopStudents: FC = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -18,7 +19,7 @@ export const TopStudents: FC = () => {
     const fetchTopStudents = async () => {
       try {
         if (typeof window === "undefined") return;
-        const response = await fetch("/api/report/top/group-a")
+        const response = await fetch(`${API_BASE_URL}/api/reports/top/group-a`)
         const result = await response.json()
 
         if (!result.success) {

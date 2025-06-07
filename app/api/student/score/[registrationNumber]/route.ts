@@ -8,7 +8,7 @@ export async function GET(request: NextRequest, { params }: { params: { registra
     console.log("Fetching student score for:", registrationNumber)
 
     const response = await fetch(
-      `${API_BASE_URL}/students/score/${registrationNumber}`,
+      `${API_BASE_URL}/api/students/score/${registrationNumber}`,
       {
         method: "GET",
         headers: {
@@ -18,7 +18,6 @@ export async function GET(request: NextRequest, { params }: { params: { registra
         signal: AbortSignal.timeout(30000), 
       },
     )
-    console.log(`Calling API: ${API_BASE_URL}/students/score/${registrationNumber}`)
 
     console.log("Response status:", response.status)
 

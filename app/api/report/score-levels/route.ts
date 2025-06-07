@@ -5,7 +5,7 @@ export async function GET(request: NextRequest) {
   try {
     console.log("Fetching score levels from external API...")
 
-    const response = await fetch(`${API_BASE_URL}/reports/score-levels`, {
+    const response = await fetch(`${API_BASE_URL}/api/reports/score-levels`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

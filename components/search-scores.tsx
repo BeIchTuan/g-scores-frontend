@@ -31,7 +31,7 @@ export const SearchScores: FC<SearchScoresProps> = ({ onScoreFound }) => {
     setError(null)
 
     try {
-      const response = await fetch(`${API_BASE_URL}/students/score/${registrationNumber}`);
+      const response = await fetch(`${API_BASE_URL}/api/students/score/${registrationNumber}`);
       const result = await response.json()
 
       if (!result.success) {

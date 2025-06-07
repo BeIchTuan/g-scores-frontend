@@ -5,7 +5,7 @@ export async function GET(request: NextRequest) {
   try {
     console.log("Fetching top students from external API...")
 
-    const response = await fetch(`${API_BASE_URL}/reports/top/group-a`, {
+    const response = await fetch(`${API_BASE_URL}/api/reports/top/group-a`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

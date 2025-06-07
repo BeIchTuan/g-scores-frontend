@@ -9,6 +9,7 @@ import { SubjectLevelChart } from "@/components/subject-level-chart"
 import { Loader2, RefreshCw } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { API_BASE_URL } from "@/lib/config"
 
 export const ScoreReport: FC = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -21,7 +22,7 @@ export const ScoreReport: FC = () => {
 
     try {
       if (typeof window === "undefined") return;
-      const response = await fetch("/api/report/score-levels")
+      const response = await fetch(`${API_BASE_URL}/api/reports/score-levels`)
       const result = await response.json()
 
       if (!result.success) {
