@@ -19,9 +19,12 @@ A web application for looking up exam scores and viewing statistical reports, bu
 
 ## Getting Started
 
-### Method 1: Run Directly
+### Run Directly
 
 ```bash
+# Move to the folder
+cd .\g-scores-frontend\
+
 # Install dependencies
 npm install
 
@@ -31,29 +34,6 @@ npm run dev
 # Build for production
 npm run build
 npm start
-```
-
-### Method 2: Use Docker Compose
-
-```bash
-# Build and run with Docker Compose
-npm run docker:compose:build
-
-# Or just run
-npm run docker:compose
-
-# Stop containers
-npm run docker:stop
-```
-
-### Method 3: Manual Docker
-
-```bash
-# Build image
-npm run docker:build
-
-# Run container
-npm run docker:run
 ```
 
 ## API Endpoints
@@ -80,32 +60,8 @@ The app provides the following API endpoints:
 ├── docker-compose.yml    # Docker Compose configuration
 ```
 
-## Deployment
-
-### Docker Compose (Recommended)
-
-```bash
-docker-compose up -d
-```
-
-The application will run at:
-
-* Frontend: [http://localhost:3000](http://localhost:3000)
-
-### Docker
-
-```bash
-docker build -t g-scores .
-docker run -p 3000:3000 g-scores
-```
-
-## Environment Variables
-
-Create a `.env.local` file if needed:
-
-```env
-NODE_ENV=production
-NEXT_TELEMETRY_DISABLED=1
+## Deployment Link
+https://g-scores-frontend-six.vercel.app/
 ```
 
 ## Health Check
