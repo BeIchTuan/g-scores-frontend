@@ -78,7 +78,6 @@ The app provides the following API endpoints:
 ├── types/                # TypeScript type definitions
 ├── Dockerfile            # Docker configuration
 ├── docker-compose.yml    # Docker Compose configuration
-└── nginx.conf            # Nginx configuration
 ```
 
 ## Deployment
@@ -92,7 +91,6 @@ docker-compose up -d
 The application will run at:
 
 * Frontend: [http://localhost:3000](http://localhost:3000)
-* Nginx (reverse proxy): [http://localhost:80](http://localhost:80)
 
 ### Docker
 
